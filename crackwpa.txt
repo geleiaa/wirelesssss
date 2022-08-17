@@ -1,0 +1,10 @@
+# Handshake capture
+
+- Para esse ataque você precisara de:
+1 - um adaptador wifi com um chiset que suporte no minimo monitor-mode e package-injection
+2 - a suite aircrack-ng
+3 - hashcat ou john the ripper
+4 - a tool hcxtools (opcional)
+
+# Primeiro passo: 
+verificar se seu chipset suporta os modos citados acima ataque ...
