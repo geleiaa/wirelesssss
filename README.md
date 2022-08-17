@@ -36,6 +36,10 @@ do desenvolvedor da ferramenta EAPHammer.
 
 # Ataques
 
+- Handshake capture
+|_ Esse ataque é o mais básico entre todos que existem, dependendo do cenário talvez seja o mais fácil.
+   Mais no arquivo crackwpa.txt ^^^  
+
 - PMKID Attack
 
 |_ (https://hashcat.net/forum/thread-7717.html) 
@@ -43,6 +47,9 @@ do desenvolvedor da ferramenta EAPHammer.
 |_ (https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/)
 
 |_ (https://null-byte.wonderhowto.com/how-to/hack-wi-fi-cracking-wpa2-passwords-using-new-pmkid-hashcat-attack-0189379/)
+
+
+
 
 # Ferramentas 
 
