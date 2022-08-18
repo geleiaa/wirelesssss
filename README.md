@@ -37,6 +37,7 @@ do desenvolvedor da ferramenta EAPHammer.
 # Ataques
 
 - Handshake capture
+
 |_ Esse ataque é o mais básico entre todos que existem, dependendo do cenário talvez seja o mais fácil.
    Mais no arquivo crackwpa.txt ^^^  
 
