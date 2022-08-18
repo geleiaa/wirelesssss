@@ -1,5 +1,5 @@
 # Wirelesssss 
-repo p/ links de conteúdos, ferramentas com foco em wifi hacking
+repo p/ links de conteúdos com foco em wifi hacking
 
 
 - Wki de uns caras muito bons em wireless hacking. Nessa wki tem uma introdução/links de várias coisas tipo
