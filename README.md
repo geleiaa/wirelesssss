@@ -20,17 +20,35 @@ ataques de "sondagem". E algumas ferramentas que automatizam vários tipos de at
 \_ (https://book.hacktricks.xyz/pentesting/pentesting-wifi)
 
 
-- Blog com vários artigos sobre ataques contra WPA2-Enterprise, ataques KARMA, MANA && mais. Inclusive é o blog
-do desenvolvedor da ferramenta EAPHammer. 
+- Blog com vários artigos sobre ataques contra WPA2-Enterprise, ataques KARMA, MANA && mais. É o blog
+do desenvolvedor da ferramenta EAPHammer (ou um dos devs). 
 
 |
 \_ (https://solstice.sh/) 
+
+
+- Blog de um dos desenvolvedores do bettercap. Tem umas coisas interessantes.
+
+|
+\_ (https://www.evilsocket.net/)
+
+
+- Vários artigos sobre wifi hacking.
+
+|
+\_ (https://null-byte.wonderhowto.com/how-to/wi-fi-hacking/)
 
 
 - Livro sobre pentest wifi do Daniel Moreno. No livro tem várias referências dos conteúdos abordados.
 
 |
 \_ (https://novatec.com.br/livros/pentest-redes-sem-fio/)
+
+
+- Syllabus da certificação Offensive Security Wireless Professional (OSWP). Com certeza vai ajudar na pesquisa.
+
+|
+\_ (https://www.offensive-security.com/documentation/PEN210_syllabus.pdf)
 
 
 
@@ -40,17 +58,23 @@ do desenvolvedor da ferramenta EAPHammer.
 
 |_ Esse ataque é o mais básico entre todos que existem, dependendo do cenário talvez seja o mais fácil.
    Mais no arquivo crackwpa.txt ^^^  
+   
+|_ (https://beta.ivc.no/wiki/index.php/WPA_Attack) aqui tem uma explicação detalhada sobre como o handshake e feito e outras formas de ataque.
+
+|_ (https://openwall.info/wiki/john/WPA-PSK) resumo da quebra do wpa-psk com JTR e exemplo de captura do handshake.
+
+
 
 - PMKID Attack
 
 |_ (https://hashcat.net/forum/thread-7717.html) 
 
-|_ (https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/)
+|_ (https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/) pmkid attack com bettercap
 
-|_ (https://null-byte.wonderhowto.com/how-to/hack-wi-fi-cracking-wpa2-passwords-using-new-pmkid-hashcat-attack-0189379/)
+|_ (https://hashcat.net/wiki/doku.php?id=cracking_wpawpa2) "passo a passo" para o pmkid attack
 
 
-
+...
 
 # Ferramentas 
 
@@ -61,3 +85,13 @@ do desenvolvedor da ferramenta EAPHammer.
 * [pyrit](https://github.com/JPaulMora/Pyrit)
 * [eaphammer](https://github.com/s0lst1c3/eaphammer)  &&  [wiki](https://github.com/s0lst1c3/eaphammer/wiki)
 * [bettercap](https://github.com/bettercap/bettercap)  &&  [site](https://www.bettercap.org/)
+
+
+
+# Adapatadores/chipsets
+
+|_ https://deviwiki.com/wiki/List_of_Wireless_Adapters_That_Support_Monitor_Mode_and_Packet_Injection
+
+|_ https://wikidevi.wi-cat.ru/
+
+
