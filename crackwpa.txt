@@ -10,7 +10,7 @@
 verificar se seu chipset suporta os modos citados acima ataque.
 
 
-$ iwlist (mostra informações sobre a interface/placa de rede)
+$ iw list (mostra informações sobre a interface/placa de rede)
 
 ou
 
