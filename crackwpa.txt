@@ -9,12 +9,11 @@
 
 _________________________________________________________________________________________________________________________________________________________
 # Primeiro passo: 
-#verificar se seu chipset suporta os modos citados acima ataque.
+#verificar se seu chipset suporta os modos citados acima.
 
 
 $ iw list   #Mostra informações sobre a interface/placa de rede. 
-	     Caso seu chipset suporte os modos, a saida do comando tera algo assim:
-	     (tera varias informações então procure por isso)	
+	     Caso seu chipset suporte os modos, na saida do comando procure algo assim:	
 
 Supported interface modes:
 		 * managed
