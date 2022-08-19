@@ -1,52 +1,68 @@
 # Wirelesssss 
 repo p/ links de conteúdos com foco em wifi hacking
+- Atualizações semanais(talvez)
+
 
 
 - Wki de uns caras muito bons em wireless hacking. Nessa wki tem uma introdução/links de várias coisas tipo
 o padrão wifi [IEEE 802.11](https://en.wikipedia.org/wiki/IEEE_802.11), link para uma introdução do aircrack-ng,
 algumas ferramentas && +++
 
+^
 |
 \_(https://github.com/rfhs/rfhs-wiki/wiki/WiFi#80211-wireless-standard)
 
+^
 |
 \_site da comunidade desse pessoal ^^^ (https://www.wirelessvillage.ninja/)
 
-                                             
+ 
+ 
 - Resumo de vários ataques como DoS, Cracking WEP && WPA, Brute-force WPS, Evil-Twin && 
 ataques de "sondagem". E algumas ferramentas que automatizam vários tipos de ataques. 
 
+^
 |
 \_ (https://book.hacktricks.xyz/pentesting/pentesting-wifi)
+
 
 
 - Blog com vários artigos sobre ataques contra WPA2-Enterprise, ataques KARMA, MANA && mais. É o blog
 do desenvolvedor da ferramenta EAPHammer (ou um dos devs). 
 
+^
 |
 \_ (https://solstice.sh/) 
 
 
+
 - Blog de um dos desenvolvedores do bettercap. Tem umas coisas interessantes.
 
+^
 |
 \_ (https://www.evilsocket.net/)
 
 
+
 - Vários artigos sobre wifi hacking.
 
+^
 |
 \_ (https://null-byte.wonderhowto.com/how-to/wi-fi-hacking/)
 
 
+
 - Livro sobre pentest wifi do Daniel Moreno. No livro tem várias referências dos conteúdos abordados.
 
+^
 |
 \_ (https://novatec.com.br/livros/pentest-redes-sem-fio/)
 
 
+
 - Syllabus da certificação Offensive Security Wireless Professional (OSWP). Com certeza vai ajudar na pesquisa.
 
+^
 |
 \_ (https://www.offensive-security.com/documentation/PEN210_syllabus.pdf)
 
@@ -78,7 +94,7 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 
 # Ferramentas 
 
-* [aircrack-ng](https://www.aircrack-ng.org/)
+* [aircrack-ng](https://www.aircrack-ng.org/) [github](https://github.com/aircrack-ng)
 * [hcxdumptool](https://github.com/ZerBea/hcxdumptool) (https://github.com/ZerBea/hcxdumptool/blob/master/docs/first_steps.txt)
 * [Wifite2](https://github.com/derv82/wifite2)  &&  [kali tools](https://www.kali.org/tools/wifite/)
 * [wifiphisher](https://github.com/wifiphisher/wifiphisher) && [site wifiphisher](https://wifiphisher.org/)
@@ -88,7 +104,7 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 
 
 
-# Adapatadores/chipsets
+# Adaptadores && chipsets
 
 |_ https://deviwiki.com/wiki/List_of_Wireless_Adapters_That_Support_Monitor_Mode_and_Packet_Injection
 
