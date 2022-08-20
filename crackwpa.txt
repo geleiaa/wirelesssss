@@ -22,7 +22,7 @@ Supported interface modes:
 
 ou
 
-$ sudo airmon-ng 
+$ sudo airmon-ng (com --verbose p/ mais detalhes)
 #Mostrara o nome da interface e o chipset, depois pesquisar para saber os modos que chipset suporta.
 A saida será parecida com essa:
 
@@ -134,7 +134,7 @@ ________________________________________________________________________________
  
 _________________________________________________________________________________________________________________________________________________________
  # Sexto passo
- #Se der certo o Quinto passo, na terminal do airodump-ng capturando os pacotes
+ #Se o Quinto passo for bem sucedido, no terminal do airodump-ng capturando os pacotes
   ira aparecer a seguinte mensagem [ WPA handshake: 00:14:6C:7E:40:80
  
  Exemplo: CH  9 ][ Elapsed: 1 min ][ 2007-04-26 17:41 ][ WPA handshake: 00:14:6C:7E:40:80
@@ -147,6 +147,15 @@ ________________________________________________________________________________
  
  
  # Se você verifcar o diretorio atual, vera alguns arquivos incluindo a captura do trafego( arquivo.cap)
+ 
+ # Depois da captura ser feita, voce precisa colocar a interface de volta em modo Managed
+ ($ ifconfig ou $ iwconfig para confirmar o modo que a interface esta)
+ 
+ $ sudo airmon-ng stop <interface>
+ # para o modo monitor
+ 
+ $ service network-manager start
+ # reinicia o gerenciador de rede
  
  
  
