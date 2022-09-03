@@ -104,10 +104,19 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 
 
 
-# Adaptadores && chipsets
+# Adaptadores && chipsets && drivers
 
 |_ https://deviwiki.com/wiki/List_of_Wireless_Adapters_That_Support_Monitor_Mode_and_Packet_Injection
 
 |_ https://wikidevi.wi-cat.ru/
 
 
+## Tp-link Archer T4U AC1300 (v3)
+![adapt](https://github.com/geleiaa/wirelesssss/blob/main/images/20220820_120235.jpg)
+
+* https://wikidevi.wi-cat.ru/TP-LINK_Archer_T4U_v3
+* Driver https://github.com/RinCat/RTL88x2BU-Linux-Driver
+* Driver https://github.com/cilynx/rtl88x2bu
+* Driver https://github.com/morrownr/88x2bu-20210702
+
+(texto ...)
