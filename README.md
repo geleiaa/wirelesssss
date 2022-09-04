@@ -119,4 +119,18 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 * Driver https://github.com/cilynx/rtl88x2bu
 * Driver https://github.com/morrownr/88x2bu-20210702
 
-(texto ...)
+**Caso tenha problemas em usar esse adaptador no VirtualBox você pode tentar 
+  alterar essa configuração com a vm desligada e depois inicie >>>**
+  
+  
+**(talvez precise instalar um driver além de fazer essas configs)**  
+  
+![vm](https://github.com/geleiaa/wirelesssss/blob/main/images/Configuracao_VM_-_Criar_novo_filtro_USB.png)  
+
+
+**o comando `lsusb` mostrara o Vendor ID e Product ID para a config. Exemplo da saida:**  
+![id](https://github.com/geleiaa/wirelesssss/blob/main/images/vendorid.png)
+
+
+* fonte: https://www.systranbox.com/how-to-setup-usb-wifi-adapter-in-virtualbox-kali-linux/
+* outra alternativa caso a primeira nao der certo: https://null-byte.wonderhowto.com/forum/wifi-hacking-attach-usb-wireless-adapter-with-virtual-box-0324433/
