@@ -228,6 +228,6 @@ ________________________________________________________________________________
 $ john hash.txt --wordlist=rockyou.txt --format=wpapsk
 ```
 
-Nota importante:  Se for uma senha forte esse ataque é inviável. Em caso de duvidas... não vou deixar nenhuma forma de contato, sinto mutio, então boa sorte ;)
+Nota importante:  Se for uma senha forte esse ataque é inviável. Em caso de duvidas... não vou deixar nenhuma forma de contato, sinto muito, então boa sorte ;)
 
  "What doesn't kill you will make you stronger."
