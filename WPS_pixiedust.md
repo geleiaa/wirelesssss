@@ -101,7 +101,9 @@ auth_alg=OPEN
 ```
 
 referencia:
+- https://novatec.com.br/livros/pentest-redes-sem-fio/
 - https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#WPS_PIN_recovery
 - https://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup
+- https://github.com/wiire-a/pixiewps
 - https://github.com/t6x/reaver-wps-fork-t6x
 - https://forums.kali.org/showthread.php?24286-WPS-Pixie-Dust-Attack-(Offline-WPS-Attack)
