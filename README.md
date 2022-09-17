@@ -81,13 +81,19 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 
 ## Brute-Force do WPS
 
-|_ Uma grande falha de segurança foi revelada em dezembro de 2011 que afeta roteadores sem fio com o recurso WPS PIN, que os modelos mais recentes habilitam por padrão. A falha permite que um invasor remoto recupere o PIN WPS em poucas horas com um ataque de força bruta e, com o PIN WPS, a chave pré-compartilhada WPA/WPA2 da rede (PSK). Isso talvez não é possível em alguns modelos de roteador. Após encontrar as redes com WPS é hora de conhecer o Reaver. Este é um software muito interessante que realiza um ataque de força bruta (brute force) contra o número pin de um Access Point com WPS (WiFi Protected Setup) habilitado. 
+|_ Uma grande falha de segurança foi revelada em dezembro de 2011 que afeta roteadores sem fio com o recurso WPS PIN, que os modelos mais recentes habilitam por padrão. A falha permite que um invasor remoto recupere o PIN WPS em poucas horas com um ataque de força bruta e, com o PIN WPS, a chave pré-compartilhada WPA/WPA2 da rede (PSK). Isso talvez não é possível em alguns modelos de roteador. Outra coisa que vale a pena ressaltar é que existe duas formas de brute-force no WPS. Uma é a **online** que consiste em testar pin a pin até achar o correto. E a outra forma é o brute-force **offline** que é conhecido como pixie-dust attack(mais informações sobre pixie-dust no arquivo wps_pixiedust ^^^)
 
 |_ (https://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup)
 
+|_ (https://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup#Vulnerabilities)
+
 |_ (https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#WPS_PIN_recovery)
 
-|_ (https://github.com/t6x/reaver-wps-fork-t6x)
+|_ (https://www.wonderhowto.com/search/wps/)
+
+|_ ferramenta para brute-force on e offline (https://github.com/t6x/reaver-wps-fork-t6x)
+
+|_ ferramenta para brute-force online (https://github.com/kimocoder/bully)
 
 
 ## PMKID Attack
@@ -103,13 +109,16 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 
 # Ferramentas 
 
-* [aircrack-ng](https://www.aircrack-ng.org/) [github](https://github.com/aircrack-ng)
-* [hcxdumptool](https://github.com/ZerBea/hcxdumptool) (https://github.com/ZerBea/hcxdumptool/blob/master/docs/first_steps.txt)
-* [Wifite2](https://github.com/derv82/wifite2)  &&  [kali tools](https://www.kali.org/tools/wifite/)
-* [wifiphisher](https://github.com/wifiphisher/wifiphisher) && [site wifiphisher](https://wifiphisher.org/)
+* [aircrack-ng](https://www.aircrack-ng.org/) - [github](https://github.com/aircrack-ng)
+* [reaver](https://github.com/t6x/reaver-wps-fork-t6x) - [kali tools](https://www.kali.org/tools/reaver/)
+* [bully](https://github.com/kimocoder/bully) - [kali tools](https://www.kali.org/tools/bully/)
+* [pixiewps](https://github.com/wiire-a/pixiewps) 
+* [hcxdumptool](https://github.com/ZerBea/hcxdumptool) - (https://github.com/ZerBea/hcxdumptool/blob/master/docs/first_steps.txt)
+* [Wifite2](https://github.com/derv82/wifite2) - [kali tools](https://www.kali.org/tools/wifite/)
+* [wifiphisher](https://github.com/wifiphisher/wifiphisher) - [site wifiphisher](https://wifiphisher.org/)
 * [pyrit](https://github.com/JPaulMora/Pyrit)
-* [eaphammer](https://github.com/s0lst1c3/eaphammer)  &&  [wiki](https://github.com/s0lst1c3/eaphammer/wiki)
-* [bettercap](https://github.com/bettercap/bettercap)  &&  [site](https://www.bettercap.org/)
+* [eaphammer](https://github.com/s0lst1c3/eaphammer) - [wiki](https://github.com/s0lst1c3/eaphammer/wiki)
+* [bettercap](https://github.com/bettercap/bettercap) - [site](https://www.bettercap.org/)
 
 
 
