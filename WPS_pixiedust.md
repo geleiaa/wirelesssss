@@ -9,7 +9,7 @@ duas chaves AES de 128 bits randômicas (E-S1 e E-S2) para encriptação da
 primeira e da segunda metade do PIN, respectivamente. Se as duas chaves
 forem descobertas, é possível recuperar o número PIN com um ataque offline
 em menos de um segundo, em vez de “chutar” o número PIN no roteador, processo que pode levar 
-de 8 a 12 horas (mais informações sobre o brute-forece offline aqui http://archive.hack.lu/2014/Hacklu2014_offline_bruteforce_attack_on_wps.pdf)
+de 8 a 12 horas (mais informações sobre o brute-force offline aqui http://archive.hack.lu/2014/Hacklu2014_offline_bruteforce_attack_on_wps.pdf)
 
 
 ## Parte pratica
@@ -37,7 +37,7 @@ $ sudo airodump-ng --wps <interface>
 
 ```
 
-##### Os APs com o WPS ativado apareceram nessa coluna com a versão do wps que o AP possui. Pode acontecer de alguns APs ficarem com um espaço vazio nessa coluna, e isso é porque o wps está desativado.
+##### Os APs com o WPS ativado apareceram nessa coluna com a versão do wps que o AP possui. Pode acontecer de alguns APs ficarem com um espaço vazio nessa coluna, isso é porque o wps está desativado.
 
 ##### Depois de ter identificado seu alvo, a ferramenta ultilizada para fazer o ataque ao WPS será a Reaver (link no final da pg) com o seguinte comando:
   
@@ -46,7 +46,7 @@ sudo reaver -i <interface> -c <channel> -b <mac do ap> -K 1
 (pode ser adicionado a flag -vv)
 ```
 ##### O resultado pode variar um pouco porque depende muito do roteador que está sendo atacado. Essa falha é relativa ao firmware do roteador, não sendo todos os roteadores vulneráveis. Você pode ver alguns exemplos aqui -> https://forums.kali.org/showthread.php?25123-Reaver-modfication-for-Pixie-Dust-Attack ou pesquisar por conta própria e ver vários resultados diferentes que as pessoas conseguem por ai ...
-##### Dependendo do resultado do ataque o reaver consegue recuperar apenas o PIN do WPS. Nos meus teste foi esse resultado que consegui, então a idéia é essa, recuperar o PIN com o ataque offline pixie-dust e depois se conectar ao AP com o pin recuperado usando o procedimento abaixo para então pegar o psk:
+##### Dependendo do resultado do ataque o reaver consegue recuperar apenas o PIN do WPS. Nos meus testes foi esse resultado que consegui, então a idéia é essa: recuperar o PIN com o ataque offline pixie-dust e depois se conectar ao AP com o pin recuperado usando o procedimento abaixo para então pegar o psk
 
 1. ***Crie o arquivo wpa_supplicant.conf em /etc/ e nesse arquivo vai as seguintes linhas***:
 
