@@ -1,10 +1,10 @@
 # Wirelesssss 
-repo p/ links de conteúdos com foco em wifi hacking
+***repo p/ links de conteúdos com foco em wifi hacking***
 - Atualizações semanais(talvez)
 
 
 
-- Wki de uns caras muito bons em wireless hacking. Nessa wki tem uma introdução/links de várias coisas tipo
+##### Wki de uns caras muito bons em wireless hacking. Nessa wki tem uma introdução/links de várias coisas tipo
 o padrão wifi [IEEE 802.11](https://en.wikipedia.org/wiki/IEEE_802.11), link para uma introdução do aircrack-ng,
 algumas ferramentas && +++
 
@@ -18,7 +18,7 @@ algumas ferramentas && +++
 
  
  
-- Resumo de vários ataques como DoS, Cracking WEP && WPA, Brute-force WPS, Evil-Twin && 
+##### Resumo de vários ataques como DoS, Cracking WEP && WPA, Brute-force WPS, Evil-Twin && 
 ataques de "sondagem". E algumas ferramentas que automatizam vários tipos de ataques. 
 
 ^
@@ -27,7 +27,7 @@ ataques de "sondagem". E algumas ferramentas que automatizam vários tipos de at
 
 
 
-- Blog com vários artigos sobre ataques contra WPA2-Enterprise, ataques KARMA, MANA && mais. É o blog
+##### Blog com vários artigos sobre ataques contra WPA2-Enterprise, ataques KARMA, MANA && mais. É o blog
 do desenvolvedor da ferramenta EAPHammer (ou um dos devs). 
 
 ^
@@ -36,7 +36,7 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 
 
 
-- Blog de um dos desenvolvedores do bettercap. Tem umas coisas interessantes.
+##### Blog de um dos desenvolvedores do bettercap. Tem umas coisas interessantes.
 
 ^
 |
@@ -44,7 +44,7 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 
 
 
-- Vários artigos sobre wifi hacking.
+##### Vários artigos sobre wifi hacking.
 
 ^
 |
@@ -52,7 +52,7 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 
 
 
-- Livro sobre pentest wifi do Daniel Moreno. No livro tem várias referências dos conteúdos abordados.
+##### Livro sobre pentest wifi do Daniel Moreno. No livro tem várias referências dos conteúdos abordados.
 
 ^
 |
@@ -60,7 +60,7 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 
 
 
-- Syllabus da certificação Offensive Security Wireless Professional (OSWP). Com certeza vai ajudar na pesquisa.
+##### Syllabus da certificação Offensive Security Wireless Professional (OSWP). Com certeza vai ajudar na pesquisa.
 
 ^
 |
@@ -70,7 +70,7 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 
 # Ataques
 
-- Handshake capture
+## Handshake capture
 
 |_ Esse ataque é o mais básico entre todos que existem, dependendo do cenário talvez seja o mais fácil.
    Mais no arquivo crackwpa.txt ^^^  
@@ -79,9 +79,18 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 
 |_ (https://openwall.info/wiki/john/WPA-PSK) resumo da quebra do wpa-psk com JTR e exemplo de captura do handshake.
 
+## Brute-Force do WPS
+
+|_ Uma grande falha de segurança foi revelada em dezembro de 2011 que afeta roteadores sem fio com o recurso WPS PIN, que os modelos mais recentes habilitam por padrão. A falha permite que um invasor remoto recupere o PIN WPS em poucas horas com um ataque de força bruta e, com o PIN WPS, a chave pré-compartilhada WPA/WPA2 da rede (PSK). Isso talvez não é possível em alguns modelos de roteador. Após encontrar as redes com WPS é hora de conhecer o Reaver. Este é um software muito interessante que realiza um ataque de força bruta (brute force) contra o número pin de um Access Point com WPS (WiFi Protected Setup) habilitado. 
+
+|_ (https://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup)
+
+|_ (https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#WPS_PIN_recovery)
+
+|_ (https://github.com/t6x/reaver-wps-fork-t6x)
 
 
-- PMKID Attack
+## PMKID Attack
 
 |_ (https://hashcat.net/forum/thread-7717.html) 
 
