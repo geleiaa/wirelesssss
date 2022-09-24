@@ -64,7 +64,7 @@
 
 
 
-##### Blog com vários artigos sobre wireless e redes no geral (tem uita coisa útil)
+##### Blog com vários artigos sobre wireless e redes no geral (tem muita coisa útil)
 
 ^
 |
