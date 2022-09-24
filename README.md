@@ -4,9 +4,7 @@
 
 
 
-##### Wki de uns caras muito bons em wireless hacking. Nessa wki tem uma introdução/links de várias coisas tipo
-o padrão wifi [IEEE 802.11](https://en.wikipedia.org/wiki/IEEE_802.11), link para uma introdução do aircrack-ng,
-algumas ferramentas && +++
+##### Wiki de uns caras muito bons em wireless hacking. Nessa wiki tem uma introdução de várias coisas tipo padrão wifi [IEEE 802.11](https://en.wikipedia.org/wiki/IEEE_802.11), link para uma introdução do aircrack-ng, algumas ferramentas && +++
 
 ^
 |
@@ -18,8 +16,7 @@ algumas ferramentas && +++
 
  
  
-##### Resumo de vários ataques como DoS, Cracking WEP && WPA, Brute-force WPS, Evil-Twin && 
-ataques de "sondagem". E algumas ferramentas que automatizam vários tipos de ataques. 
+##### Resumo de vários ataques como DoS, Cracking WEP && WPA, Brute-force WPS, Evil-Twin && ataques de "sondagem". E algumas ferramentas que automatizam esses tipos ataques. 
 
 ^
 |
@@ -27,8 +24,7 @@ ataques de "sondagem". E algumas ferramentas que automatizam vários tipos de at
 
 
 
-##### Blog com vários artigos sobre ataques contra WPA2-Enterprise, ataques KARMA, MANA && mais. É o blog
-do desenvolvedor da ferramenta EAPHammer (ou um dos devs). 
+##### Blog com vários artigos sobre ataques contra WPA2-Enterprise, ataques KARMA, MANA && mais. Blog de um dos desenvolvedores da ferramenta EAPHammer. 
 
 ^
 |
@@ -65,6 +61,14 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 ^
 |
 \_ (https://www.offensive-security.com/documentation/PEN210_syllabus.pdf)
+
+
+
+##### Blog com vários artigos sobre wireless e redes no geral (tem uita coisa útil)
+
+^
+|
+\_ (https://mrncciew.com/)
 
 
 
@@ -116,7 +120,7 @@ do desenvolvedor da ferramenta EAPHammer (ou um dos devs).
 * [hcxdumptool](https://github.com/ZerBea/hcxdumptool) - (https://github.com/ZerBea/hcxdumptool/blob/master/docs/first_steps.txt)
 * [Wifite2](https://github.com/derv82/wifite2) - [kali tools](https://www.kali.org/tools/wifite/)
 * [wifiphisher](https://github.com/wifiphisher/wifiphisher) - [site wifiphisher](https://wifiphisher.org/)
-* [pyrit](https://github.com/JPaulMora/Pyrit)
+* [pyrit (não oficial)](https://github.com/JPaulMora/Pyrit) - [google code](https://code.google.com/archive/p/pyrit/) - [site](https://pyrit.wordpress.com/)
 * [eaphammer](https://github.com/s0lst1c3/eaphammer) - [wiki](https://github.com/s0lst1c3/eaphammer/wiki)
 * [bettercap](https://github.com/bettercap/bettercap) - [site](https://www.bettercap.org/)
 
