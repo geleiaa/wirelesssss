@@ -76,8 +76,7 @@
 
 ## Handshake capture
 
-|_ Esse ataque é o mais básico entre todos que existem, dependendo do cenário talvez seja o mais fácil.
-   Mais no arquivo crackwpa.txt ^^^  
+|_ Esse ataque é o mais básico entre todos que existem, dependendo do cenário talvez seja o mais fácil (***mais informações no arquivo crackwpa.md la em cima***).  
    
 |_ (https://beta.ivc.no/wiki/index.php/WPA_Attack) aqui tem uma explicação detalhada sobre como o handshake e feito e outras formas de ataque.
 
@@ -85,7 +84,7 @@
 
 ## Brute-Force do WPS
 
-|_ Uma grande falha de segurança foi revelada em dezembro de 2011 que afeta roteadores sem fio com o recurso WPS PIN, que os modelos mais recentes habilitam por padrão. A falha permite que um invasor remoto recupere o PIN WPS em poucas horas com um ataque de força bruta e, com o PIN WPS, a chave pré-compartilhada WPA/WPA2 da rede (PSK). Isso talvez não é possível em alguns modelos de roteador. Outra coisa que vale a pena ressaltar é que existe duas formas de brute-force no WPS. Uma é a **online** que consiste em testar pin a pin até achar o correto. E a outra forma é o brute-force **offline** que é conhecido como pixie-dust attack(mais informações sobre pixie-dust no arquivo wps_pixiedust ^^^)
+|_ Uma grande falha de segurança foi revelada em dezembro de 2011 que afeta roteadores sem fio com o recurso WPS PIN, que os modelos mais recentes habilitam por padrão. A falha permite que um invasor remoto recupere o PIN WPS em poucas horas com um ataque de força bruta e, com o PIN WPS, a chave pré-compartilhada WPA/WPA2 da rede (PSK). Isso talvez não é possível em alguns modelos de roteador. Outra coisa que vale a pena ressaltar é que existe duas formas de brute-force no WPS. Uma é a **online** que consiste em testar pin a pin até achar o correto. E a outra forma é o brute-force **offline** que é conhecido como pixie-dust attack(***mais informações sobre pixie-dust no arquivo wps_pixiedust.md la pra cima***)
 
 |_ (https://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup)
 
