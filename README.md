@@ -28,7 +28,7 @@
 
 ^
 |
-\_ (https://solstice.sh/) (site off até o momento, artigos tambm no medium) 
+\_ (https://solstice.sh/) (site off até o momento, artigos também no medium) 
 
 ^
 |
