@@ -200,7 +200,9 @@ ________________________________________________________________________________
  ##### Você pode verificar se os pacotes de autenticação foram capturados com sucesso abrindo o arquivo .cap no wireshark e filtrando os pacotes EAPOL dessa forma:  
  
  ![eapol](https://github.com/geleiaa/wirelesssss/blob/main/images/eapol-ex.png)
+ 
  (os pacotes m1 até m4 precisam ser capturados)
+ 
  ##### mais  informações aqui: (https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
  
  
