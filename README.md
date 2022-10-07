@@ -28,7 +28,11 @@
 
 ^
 |
-\_ (https://solstice.sh/) 
+\_ (https://solstice.sh/) (site off até o momento, artigos tambm no medium) 
+
+^
+|
+\_ (https://medium.com/@s0lst1c3)
 
 
 
