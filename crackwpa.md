@@ -148,7 +148,7 @@ ________________________________________________________________________________
  
  ##### Para desautenticar uma STATION de um AP sera usado o aireplay-ng:
  ```
- $ aireplay -0 1 -a <macAP> -c <macSTATION> <interface>
+ $ aireplay-ng -0 1 -a <macAP> -c <macSTATION> <interface>
  ```
  > -0 especifica o Deauthentication attack   
  > 1 é o número de deauths a serem enviados  
@@ -197,7 +197,13 @@ ________________________________________________________________________________
  
 _________________________________________________________________________________________________________________________________________________________
  # Setimo passo
- ##### Você pode verificar se os pacotes de autenticação foram capturados com sucesso abrindo o arquivo .cap no wireshark e filtrando os pacotes EAPOL. (colocar imagem aqui)
+ ##### Você pode verificar se os pacotes de autenticação foram capturados com sucesso abrindo o arquivo .cap no wireshark e filtrando os pacotes EAPOL dessa forma:  
+ 
+ ![eapol](https://github.com/geleiaa/wirelesssss/blob/main/images/eapol-ex.png)
+ (os pacotes m1 até m4 precisam ser capturados)
+ ##### mais  informações aqui: (https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
+ 
+ 
  ##### Depois do HANDSHAKE capturado há algumas formas de extrair só a parte que interessa. Uma delas é com uma ferramenta WPAPCAP2JOHN do pacote John The Ripper.
  ```
  $ wpapcap2john -v arquivo.cap
