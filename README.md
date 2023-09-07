@@ -4,19 +4,19 @@
 
 
 
-##### Wiki de uns caras muito bons em wireless hacking. Nessa wiki tem uma introdução de várias coisas tipo padrão wifi [IEEE 802.11](https://en.wikipedia.org/wiki/IEEE_802.11), link para uma introdução do aircrack-ng, algumas ferramentas && +++
+##### Wiki RFHS/WirelessVillage
 
 ^
 |
-\_(https://github.com/rfhs/rfhs-wiki/wiki/WiFi#80211-wireless-standard)
+\_ https://github.com/rfhs/rfhs-wiki/wiki/WiFi#80211-wireless-standard
 
 ^
 |
-\_site da comunidade desse pessoal ^^^ (https://www.wirelessvillage.ninja/)
+\_ https://rfhackers.com/  - (https://www.wirelessvillage.ninja/)
 
  
  
-##### Resumo de vários ataques como DoS, Cracking WEP && WPA, Brute-force WPS, Evil-Twin && ataques de "sondagem". E algumas ferramentas que automatizam esses tipos ataques. 
+##### Resumo de vários ataques como DoS, Cracking WEP && WPA, Brute-force WPS, Evil-Twin && ataques de "sondagem". E algumas ferramentas de automação de ataques. 
 
 ^
 |
@@ -24,19 +24,19 @@
 
 
 
-##### Blog com vários artigos sobre ataques contra WPA2-Enterprise, ataques KARMA, MANA && mais. Blog de um dos desenvolvedores da ferramenta EAPHammer. 
+##### Blog com vários artigos sobre ataques contra WPA2-Enterprise, ataques KARMA, MANA && mais. Blog de um dos desenvolvedores do EAPHammer. 
 
 ^
 |
-\_ (https://solstice.sh/) (site off até o momento, artigos também no medium) 
+\_ https://solstice.sh/ (site off até o momento) 
 
 ^
 |
-\_ (https://medium.com/@s0lst1c3)
+\_ https://medium.com/@s0lst1c3 (@soltstice artigos também no medium)
 
 
 
-##### Blog de um dos desenvolvedores do bettercap. Tem umas coisas interessantes.
+##### Blog de um dos desenvolvedores do bettercap (evilsocket).
 
 ^
 |
@@ -52,7 +52,7 @@
 
 
 
-##### Livro sobre pentest wifi do Daniel Moreno. No livro tem várias referências dos conteúdos abordados.
+##### Livro sobre pentest wifi (Daniel Moreno).
 
 ^
 |
@@ -60,7 +60,7 @@
 
 
 
-##### Syllabus da certificação Offensive Security Wireless Professional (OSWP). Com certeza vai ajudar na pesquisa.
+##### syllabus da certificação Offensive Security Wireless Professional (OSWP).
 
 ^
 |
@@ -68,7 +68,7 @@
 
 
 
-##### Blog com vários artigos sobre wireless e redes no geral (tem muita coisa útil)
+##### Blog com vários artigos sobre redes wireless e redes no geral.
 
 ^
 |
@@ -78,17 +78,17 @@
 
 # Ataques
 
-## Handshake capture
+## Ataque ao WPA2
 
-|_ Esse ataque é o mais básico entre todos que existem, dependendo do cenário talvez seja o mais fácil (***mais informações no arquivo crackwpa.md la em cima***).  
+|_ Esse ataque é o mais básico entre todos que existem, dependendo do cenário talvez seja o mais fácil (***mais informações no arquivo crackwpa.md a cima***).  
    
-|_ (https://beta.ivc.no/wiki/index.php/WPA_Attack) aqui tem uma explicação detalhada sobre como o handshake e feito e outras formas de ataque.
+|_ (https://beta.ivc.no/wiki/index.php/WPA_Attack) explicação detalhada sobre como o handshake é feito e outras formas de ataque.
 
-|_ (https://openwall.info/wiki/john/WPA-PSK) resumo da quebra do wpa-psk com JTR e exemplo de captura do handshake.
+|_ (https://openwall.info/wiki/john/WPA-PSK) resumo da quebra do wpa com JTR e exemplo de captura do handshake.
 
 ## Brute-Force do WPS
 
-|_ Uma grande falha de segurança foi revelada em dezembro de 2011 que afeta roteadores sem fio com o recurso WPS PIN, que os modelos mais recentes habilitam por padrão. A falha permite que um invasor remoto recupere o PIN WPS em poucas horas com um ataque de força bruta e, com o PIN WPS, a chave pré-compartilhada WPA/WPA2 da rede (PSK). Isso talvez não é possível em alguns modelos de roteador. Outra coisa que vale a pena ressaltar é que existe duas formas de brute-force no WPS. Uma é a **online** que consiste em testar pin a pin até achar o correto. E a outra forma é o brute-force **offline** que é conhecido como pixie-dust attack(***mais informações sobre pixie-dust no arquivo wps_pixiedust.md la pra cima***)
+|_ Uma grande falha de segurança foi revelada em dezembro de 2011 que afeta roteadores sem fio com o recurso WPS, que os modelos mais recentes habilitam por padrão. A falha permite que um invasor remoto recupere o PIN WPS em poucas horas com um ataque de força bruta e, com o PIN WPS, a chave pré-compartilhada WPA/WPA2 da rede (PSK). Isso talvez não é possível em alguns modelos de roteador. Outra coisa que vale a pena ressaltar é que existem duas formas de brute-force no WPS: Uma é a **online** que consiste em testar pin a pin até achar o correto. E a outra forma é o brute-force **offline** que é conhecido como pixie-dust attack(***mais informações sobre pixie-dust no arquivo wps_pixiedust.md a cima***)
 
 |_ (https://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup)
 
