@@ -43,7 +43,6 @@ Nessa parte você precisa ajustar os paths dos arquivos estaticos de css (no htm
 
 ```
 └──╼ #./eaphammer --create-template --name firm-update --description "description..." --url http://127.0.0.1/
-
 ```
 
 Para confirmar que a pagina foi clonada você pode listar os templates disponiveis:
