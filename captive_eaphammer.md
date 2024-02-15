@@ -114,7 +114,7 @@ exemplo de visão do alvo
 
 #### Deauth na rede alvo:
 
-Depois que o fake ap estive up e espando conexões você deve desautenticar os clientes da rede alvo para que eles possam se conectar no fake ap. Use o aireplay-ng pra isso:
+Depois que o fake ap estiver up e esperando conexões você deve desautenticar os clientes da rede alvo para que eles possam se conectar no fake ap. Use o aireplay-ng pra isso:
 
 ```
 aireplay-ng -0 0 -a TARGET-AP-MAC INTEFACE-NAME
