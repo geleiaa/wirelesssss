@@ -37,7 +37,7 @@ Nota: Tive problemas para clonar a pagina direto do link acima, então tive que 
 
 Faça download dos arquivos da pagina, mova-os para /var/www/html, starte o serviço do apache e acesse o localhost (127.0.0.1) no navegador.
 
-![phishrouterpagina](https://github.com/geleiaa/wirelesssss/blob/main/images/phishrouterpg.png)
+![phishrouterpg](https://github.com/geleiaa/wirelesssss/blob/main/images/pihishrouterpg.png)
 
 Nessa parte você precisa ajustar os paths dos arquivos estaticos de css (no html) para a pagina ficar legivel (aqui que entra o conhecimento de frontend). Se a pagina estiver normal, rode o seguinte comando para clona-la:
 
