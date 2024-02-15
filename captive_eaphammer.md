@@ -13,7 +13,6 @@ Para esse ataque você vai precisar de:
 4 - algum conhecimento basico de frontend
 
 
-
 ### 1 - escolhendo a pagina de phishing:
 
 A pagina de phishing pode depender do cenario em que o ataque será feito, então fica a critério do atacante escolher a mais adequada.
