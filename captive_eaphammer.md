@@ -38,7 +38,7 @@ Nota: Tive problemas para clonar a pagina direto do link acima, então tive que 
 
 Faça download dos arquivos da pagina, mova-os para /var/www/html, starte o serviço do apache e acesse o localhost (127.0.0.1) no navegador.
 
-[phishrouterpagina]()
+![phishrouterpagina](https://github.com/geleiaa/wirelesssss/blob/main/images/phishrouterpg.png)
 
 Nessa parte você precisa ajustar os paths dos arquivos estaticos de css (no html) para a pagina ficar legivel (aqui que entra o conhecimento de frontend). Se a pagina estiver normal, rode o seguinte comando para clona-la:
 
@@ -84,9 +84,9 @@ Você tera que editar a pagina antes de subir a rede falsa. Fazendo isso o backe
 
 Depois de alterações o pagina deve ficar assim:
 
-[inputhtmledit]()
+![inputhtmledit](https://github.com/geleiaa/wirelesssss/blob/main/images/inputhtmledit.png)
 
-[pgrendered]()
+![pgrendered](https://github.com/geleiaa/wirelesssss/blob/main/images/pgrendered.png)
 
 Nota: Você pode fazer o mesmo processo de editar o html para mudar outras partes, como o logo do vendor do roteador alvo, traduzir a pagina para portugues e etc. Isso para aumentar a credibilidade do phishing (fica critério do atacante).
 
@@ -108,11 +108,11 @@ Dica:
 
 Se estiver tudo certo o fake ap vai ser iniciado como uma rede OPEN e você poderá ve-la igual qualquer outra rede (mas não se conecte a rede quando estiver fazendo o ataque). Você verá nos logs do terminal que o ap está ativo:
 
-[fakeapok]()
+![fakeapok](https://github.com/geleiaa/wirelesssss/blob/main/images/fakeapok.png)
 
 exemplo de visão do alvo
 
-[clientexample]()
+![clientexample](https://github.com/geleiaa/wirelesssss/blob/main/images/clientexample.png)
 
 #### Deauth na rede alvo:
 
@@ -129,17 +129,17 @@ Dica: o comando acima manda deauth para o broadcast da rede alvo, ou seja, todos
 
 Quando alguém se conectar ao fake ap, os logs vão aparecer na tela do terminal junto com os logs do DNS-spoofing funcionando e redirecionando os dispositivos conectados para a pagina de phishing:
 
-[clientconect]()
+![clientconect](https://github.com/geleiaa/wirelesssss/blob/main/images/clientconect.png)
 
 Conforme o client vai tentando acessar outras paginas pelo navegador o ataque de spoofing continua redirencionando para a pagina de phishing.
 
 
 exemplo de visão do alvo em smartphone
 
-[phoneexample]()
+![phoneexample](https://github.com/geleiaa/wirelesssss/blob/main/images/phoneexample.png)
 
 O client conectado verá o pagina de atualização de firmware e se a sua eng-social der certo, ele digitara a senha pensando que há uma atualização de firmware do roteador... e a psk digitada vai aparecer nos logs do fake ap:
 
-[recvpsk]()
+![recvpsk](https://github.com/geleiaa/wirelesssss/blob/main/images/recvpsk.png)
 
 
